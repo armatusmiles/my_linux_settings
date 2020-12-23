@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $mod_alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -139,6 +140,10 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+bindsym $mod_alt+Shift+1 exec --no-startup-id "setxkbmap -layout us"
+bindsym $mod_alt+Shift+2 exec --no-startup-id "setxkbmap -layout ru"
+bindsym $mod_alt+Shift+3 exec --no-startup-id "setxkbmap -layout ua"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
