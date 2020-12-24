@@ -184,3 +184,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
