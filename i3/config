@@ -188,3 +188,8 @@ bar {
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
+
+# Screenshot hotkeys
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+# TODO temprorary wjile  I have preinstall gnome
+bindsym Control+Print exec gnome-screenshot -i
