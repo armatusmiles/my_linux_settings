@@ -15,6 +15,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
+    " Colorschema
+    Plug 'tyrannicaltoucan/vim-quantum'
+    Plug 'vim-airline/vim-airline'
+    " Use 'Colorturner' in command line
+    Plug 'zefei/vim-colortuner'
+
     Plug 'autozimu/LanguageClient-neovim', {
         \ 'branch': 'next',
         \ 'do': 'bash install.sh',
