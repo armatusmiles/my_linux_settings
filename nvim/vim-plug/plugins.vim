@@ -18,11 +18,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Colorschema
     Plug 'tyrannicaltoucan/vim-quantum'
     Plug 'vim-airline/vim-airline'
-    " Use 'Colorturner' in command line
+    " Use Colorturner in command line
     Plug 'zefei/vim-colortuner'
 
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ }
+    " Autocompletion framework for built-in LSP
+    Plug 'nvim-lua/completion-nvim'
+    Plug 'neovim/nvim-lspconfig'
 call plug#end()
