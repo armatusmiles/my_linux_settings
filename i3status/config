@@ -1,0 +1,44 @@
+general {
+        colors = true
+        interval = 1
+}
+
+order += "wireless wlp8s0"
+order += "ethernet enp9s0"
+order += "battery 0"
+order += "volume master"
+order += "time"
+
+wireless wlp8s0 {
+        format_up = "W: (%quality at %essid, %bitrate) %ip"
+        format_down = "W: down"
+}
+
+ethernet enp9s0 {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+battery 0 {
+        format = "%status %percentage %remaining"
+        format_down = "No battery"
+        status_chr = "⚡ CHR"
+        status_bat = "🔋 BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
+}
+
+time {
+        format = "%d-%m %H:%M:%S"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
