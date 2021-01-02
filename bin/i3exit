@@ -1,6 +1,6 @@
 #!/bin/sh
 lock() {
-    i3lock
+    i3lock -i ~/.config/gnu_linux.png
 }
 
 case "$1" in
