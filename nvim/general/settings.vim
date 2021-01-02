@@ -1,6 +1,7 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
+
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
@@ -35,6 +36,10 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set scrolloff=7                         " Alyaws show N lines under cursor
 set autochdir                           " Your working directory will always be the same as your working directory
+set updatetime=300 " Set updatetime for CursorHold 300ms of no cursor movement to trigger CursorHold
+set shortmess+=c " Avoid showing extra messages when using completion
+set completeopt=menuone,noinsert,noselect " Set completeopt to have a better completion experience
+
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
