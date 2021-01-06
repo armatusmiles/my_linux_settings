@@ -34,3 +34,6 @@ nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gdf    <cmd>lua vim.lsp.buf.definition()<CR>
+
+" use ESC to exit from terminal
+:tnoremap <Esc> <C-\><C-n>
