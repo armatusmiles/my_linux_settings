@@ -1,4 +1,4 @@
-sudo apt install light clangd
+sudo apt install light clangd fonts-noto-color-emoji gammastep blueman 
 
 # Light - control brightness
 # clangd - LSP server
