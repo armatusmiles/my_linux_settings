@@ -1,3 +1,4 @@
+#!/bin/sh
 # The sway configuration file in ~/.config/sway/config calls this script.
 # You should see changes to the status bar after saving this script.
 # If not, do "killall swaybar" and $mod+Shift+c to reload the configuration.
@@ -33,9 +34,23 @@ audio_volume=$(amixer -M get Master |\
 	$5" 🔉"}' |\
 	tr -d [])
 
+keyboard_layout=$(swaymsg -t get_inputs | \
+	jq '.[] | select(.identifier|test("keyboard"))' | \
+	jq '.xkb_active_layout_name' | \
+	tr -d \"\")
+
+shopt -s nocasematch
+if [[ $keyboard_layout == *"eng"* ]]; then
+	layout_smile=🇺🇸
+elif [[ $keyboard_layout == *"rus"* ]]; then
+	layout_smile=🇷🇺
+elif [[ $keyboard_layout == *"ukr"* ]]; then
+	layout_smile=🇺🇦
+fi
+
 # Additional emojis and characters for the status bar:
 # Electricity: ⚡ ↯ ⭍ 🔌
 # Audio: 🔈 🔊 🎧 🎶 🎵 🎤
 # Separators: \| ❘ ❙ ❚
 # Misc: 🐧 💎 💻 💡 ⭐ 📁 ↑ ↓ ✉ ✅ ❎
-echo $audio_volume $battery_info 🔋 $date_formatted
+echo $layout_smile $audio_volume $battery_info 🔋 $date_formatted
