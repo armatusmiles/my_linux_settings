@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "You should specify delay in minutes"
+    exit 1
+fi
+
+if [ -z "$2" ]; then
+    message="Timeout is expired"
+else
+    message=$2
+fi
+
+seconds=`expr $1 \* 60`
+sleep $seconds && notify-send -u critical "$message" & disown
