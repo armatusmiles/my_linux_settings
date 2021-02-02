@@ -211,10 +211,7 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
     status_command while bash ~/.config/sway/status.sh; do sleep 1; done
-    # status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
     font pango:DejaVu Sans Mono 10
 
     colors {
@@ -227,12 +224,21 @@ bar {
 bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 bindsym $mod+p       exec shotman active
 bindsym $mod+Shift+p exec shotman area
-#bindsym $mod+$alt+p  exec shotman output
 bindsym $mod+Ctrl+p  exec shotman window
 
+# Screenlock #
+set $lock_bg ~/Pictures/gnu_linux.png
+bindsym $mod+End exec swaylock -i $lock_bg
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000 -i $lock_bg' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000 -i $lock_bg'
+##############
+#
 include /etc/sway/config.d/*
