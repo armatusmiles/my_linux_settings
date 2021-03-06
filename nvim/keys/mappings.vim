@@ -5,6 +5,9 @@ vmap <C-C> "+y
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+" Ctrl+s save file
+nmap <C-s> :w<CR>
+
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j

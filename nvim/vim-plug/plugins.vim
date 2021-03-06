@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
 
     " Colorschema
-    Plug 'tyrannicaltoucan/vim-quantum'
+    Plug 'kurotych/vim-quantum'
     Plug 'vim-airline/vim-airline'
     " Use Colorturner in command line
     Plug 'zefei/vim-colortuner'
@@ -25,4 +25,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-lua/completion-nvim'
     Plug 'neovim/nvim-lspconfig'
     Plug 'puremourning/vimspector'
+    " Solidity syntax
+    Plug 'tomlion/vim-solidity'
+
 call plug#end()
