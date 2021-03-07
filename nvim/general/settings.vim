@@ -3,6 +3,8 @@ let g:mapleader = "\<Space>"
 
 
 syntax enable                           " Enables syntax highlighing
+filetype plugin indent on
+set signcolumn=yes
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed

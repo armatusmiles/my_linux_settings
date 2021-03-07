@@ -40,3 +40,7 @@ nnoremap <silent> gdf    <cmd>lua vim.lsp.buf.definition()<CR>
 
 " use ESC to exit from terminal
 :tnoremap <Esc> <C-\><C-n>
+
+" Clear highlighting on escape in normal mode
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[

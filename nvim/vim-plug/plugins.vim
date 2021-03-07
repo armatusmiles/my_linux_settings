@@ -24,6 +24,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Autocompletion framework for built-in LSP
     Plug 'nvim-lua/completion-nvim'
     Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/lsp_extensions.nvim'
     Plug 'puremourning/vimspector'
     " Solidity syntax
     Plug 'tomlion/vim-solidity'
