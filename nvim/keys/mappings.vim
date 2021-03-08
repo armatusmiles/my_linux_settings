@@ -1,3 +1,4 @@
+:let mapleader = "\<Space>"
 " Copy test outside of VIM
 vmap <C-C> "+y
 
@@ -44,3 +45,8 @@ nnoremap <silent> gdf    <cmd>lua vim.lsp.buf.definition()<CR>
 " Clear highlighting on escape in normal mode
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
+
+" FZF
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
