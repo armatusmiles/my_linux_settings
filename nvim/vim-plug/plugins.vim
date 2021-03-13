@@ -12,8 +12,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     " File Explorer
     Plug 'scrooloose/NERDTree'
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
 
     " Colorschema
     Plug 'kurotych/vim-quantum'
@@ -34,4 +32,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
 
+    Plug 'tpope/vim-commentary'
 call plug#end()

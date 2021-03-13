@@ -1,5 +1,5 @@
 sudo apt install light clangd fonts-noto-color-emoji gammastep \
-    blueman swaylock swayidle pavucontrol imv ripgrep
+    blueman swaylock swayidle pavucontrol imv ripgrep thunar
 
 
 

@@ -1,7 +1,7 @@
 autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
 
 " Show diagnostic popup on cursor hold
-autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+" autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 
 lua <<EOF
 require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach, name=…, settings = {…}, …}
