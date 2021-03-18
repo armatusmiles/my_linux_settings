@@ -1,4 +1,8 @@
 :let mapleader = "\<Space>"
+
+" Save file in insert mode ang to to NORMAL
+inoremap <silent> <C-S> <cmd> :stopinsert \| :w<CR>
+
 " Copy test outside of VIM
 vmap <C-C> "+y
 

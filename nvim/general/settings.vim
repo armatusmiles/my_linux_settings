@@ -1,7 +1,6 @@
 " set leader key
 let g:mapleader = "\<Space>"
-
-
+let g:loaded_matchparen=1
 syntax enable                           " Enables syntax highlighing
 filetype plugin indent on
 set signcolumn=yes
@@ -41,8 +40,7 @@ set autochdir                           " Your working directory will always be 
 set updatetime=300 " Set updatetime for CursorHold 300ms of no cursor movement to trigger CursorHold
 set shortmess+=c " Avoid showing extra messages when using completion
 set completeopt=menuone,noinsert,noselect " Set completeopt to have a better completion experience
-
-
+set completeopt-=preview
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
