@@ -1,7 +1,7 @@
 :let mapleader = "\<Space>"
 
 " Save file in insert mode ang to to NORMAL
-inoremap <silent> <C-S> <cmd> :stopinsert \| :w<CR>
+inoremap <silent> <C-s> <ESC>:w<CR>
 
 " Copy test outside of VIM
 vmap <C-C> "+y
@@ -42,7 +42,11 @@ nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gdf   <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
 
+" Goto previous/next diagnostic warning/error
+nnoremap <silent> g[ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " use ESC to exit from terminal
 :tnoremap <Esc> <C-\><C-n>
 
