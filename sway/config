@@ -241,4 +241,11 @@ exec swayidle -w \
          before-sleep 'swaylock -f -c 000000 -i $lock_bg'
 ##############
 #
+
+#  make key bindings work regardless of the currently active layout
+bindsym --to-code {
+    $mod+b splith
+    $mod+v splitv
+}
+
 include /etc/sway/config.d/*
