@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/NERDTree'
 
     " Colorschema
+    Plug 'overcache/NeoSolarized'
     Plug 'kurotych/vim-quantum'
     Plug 'vim-airline/vim-airline'
     " Use Colorturner in command line
